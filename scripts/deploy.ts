@@ -10,7 +10,8 @@ async function main() {
   );
 
   // Get the admin address from environment variable or use deployer as default
-  const adminAddress = process.env.ADMIN_ADDRESS || deployer.address;
+  const adminAddress =
+    process.env.ADMIN2_ADDRESS || process.env.ADMIN_ADDRESS || deployer.address;
 
   // Set redemption deadline to October 19, 2025 at 13:00 UTC
   const redemptionDeadline = Math.floor(

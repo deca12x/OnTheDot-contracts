@@ -1,5 +1,8 @@
 import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
+import * as dotenv from "dotenv";
+
+dotenv.config();
 
 const config: HardhatUserConfig = {
   solidity: {
@@ -18,7 +21,14 @@ const config: HardhatUserConfig = {
     polkadotHubTestnet: {
       url: "https://testnet-passet-hub-eth-rpc.polkadot.io",
       chainId: 420420422, // Polkadot Hub TestNet chain ID
-      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+      accounts: process.env.PRIVATE2_KEY
+        ? [process.env.PRIVATE2_KEY]
+        : process.env.PRIVATE_KEY
+        ? [process.env.PRIVATE_KEY]
+        : [],
+      gas: "auto",
+      gasPrice: "auto",
+      timeout: 60000,
     },
   },
   etherscan: {
