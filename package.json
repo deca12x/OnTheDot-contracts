@@ -1,0 +1,35 @@
+{
+  "name": "onthedot-contracts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "hardhat compile",
+    "test": "hardhat test test/EventDeposit.simple.test.ts",
+    "test:coverage": "hardhat coverage",
+    "deploy:local": "hardhat run scripts/deploy.ts --network hardhat",
+    "deploy:testnet": "hardhat run scripts/deploy.ts --network polkadotHubTestnet",
+    "verify": "hardhat verify",
+    "clean": "hardhat clean",
+    "typechain": "hardhat typechain",
+    "node": "hardhat node"
+  },
+  "keywords": [
+    "ethereum",
+    "polkadot",
+    "smart-contracts",
+    "hardhat",
+    "solidity",
+    "nfc",
+    "events"
+  ],
+  "author": "OnTheDot Team",
+  "license": "MIT",
+  "description": "Smart contracts for OnTheDot - Event deposit and redemption system",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@types/node": "^24.8.1",
+    "hardhat": "^2.26.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
